@@ -1,0 +1,8 @@
+--SQLQuery2-SELECT.sql
+
+USE PV_522_DDL;
+
+ALTER TABLE		Groups
+ALTER COLUMN	start_time TIME(0) NOT NULL;
+
+SELECT * FROM Groups;
