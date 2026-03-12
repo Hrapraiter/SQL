@@ -43,12 +43,3 @@ USE PV_522_Import;
 --WHERE discipline = discipline_id
 --GROUP BY discipline_id , discipline_name , discipline HAVING COUNT(*) > 1
 
-
-
---SELECT COUNT(*) FROM TABLE колличество стобцов в таблице
-
---GROUP BY Name , Department групировать по полям name , department
---HAVING COUNT(*) > 1 фильтровать по колличеству строк больше 1
-
---DECLARE @name TYPE; выделение переменной
---SET @name = N'Павел' задать значение
