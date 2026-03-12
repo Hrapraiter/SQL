@@ -28,12 +28,13 @@ SET DATEFIRST 1;
 
 DECLARE @current_date			DATE		= '03/12/2025';
 DECLARE @date_today				DATE		= CAST(GETDATE() AS DATE);
-DECLARE @direction_id			INT			= 1;
+DECLARE @discipline_id 			INT			= 1;
 DECLARE @number_of_leassons		INT;
-DECLARE @direction_id_max		INT			= 7;
+DECLARE @discipline_id_max		INT			= 7;
 
 DECLARE @group					INT;
 DECLARE @teacher				INT;
+DECLARE @spent					BIT			= 1;
 
 SELECT @group = group_id FROM Groups WHERE group_name = N'PV_522'
 
@@ -46,7 +47,7 @@ AND middle_name = N'Анатольевич'
 DECLARE @Shedule TABLE -- для тестов
 (
 	leasson_id		BIGINT			PRIMARY KEY IDENTITY(1,1),
-	direction		SMALLINT	NOT NULL,
+	discipline		SMALLINT	NOT NULL,
 	[group]			INT			NOT NULL,
 	teacher			INT			NOT NULL,
 	[date]			DATE		NOT NULL,
@@ -54,29 +55,29 @@ DECLARE @Shedule TABLE -- для тестов
 	spent			BIT			NOT NULL
 );
 
-WHILE @direction_id <= @direction_id_max
+WHILE @discipline_id <= @discipline_id_max
 BEGIN
 	SELECT @number_of_leassons = number_of_lessons 
 	FROM Disciplines
-	WHERE @direction_id = discipline_id
+	WHERE @discipline_id  = discipline_id
 
 	WHILE @number_of_leassons > 0
 	BEGIN
-		IF @current_date > @date_today BREAK;
+		IF @current_date > @date_today SET @spent = 0;
 		
 		DECLARE @dw_temp INT = DATEPART(WEEKDAY , @current_date);
 		IF @dw_temp = 2 OR @dw_temp = 4 OR @dw_temp = 6
 		BEGIN
-			INSERT INTO @Shedule(direction, [group] , teacher , [date] , [time] , spent)
+			INSERT INTO @Shedule(discipline, [group] , teacher , [date] , [time] , spent)
 			SELECT 
-				direction	= direction_id,
+				discipline	= @discipline_id ,
 				[group]		= @group,
 				teacher		= @teacher,
 				[date]		= @current_date,
 				[time]		= '18:30:00',
-				spent		= 1
-			FROM Directions
-			WHERE direction_id = @direction_id 
+				spent		= @spent
+			FROM Disciplines
+			WHERE discipline_id = @discipline_id 
 
 			SET @number_of_leassons -= 1
 		END
@@ -84,7 +85,7 @@ BEGIN
 		SET @current_date = DATEADD(DAY , 1 , @current_date)
 	END
 
-	SET @direction_id += 1;
+	SET @discipline_id += 1;
 END
 
 SELECT * FROM @Shedule
