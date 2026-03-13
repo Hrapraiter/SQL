@@ -58,6 +58,12 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery5-ALL_IN_ONE.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery5-ALTER Shedule.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5-ALTER Shedule.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery5-DROP DATABASE ALL_IN_ONE.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>

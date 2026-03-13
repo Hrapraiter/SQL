@@ -3,8 +3,10 @@
 USE PV_522_Import;
 
 
---ALTER TABLE Shedule
---DELETE FROM Shedile ;
+--ALTER TABLE Schedule
+--DELETE FROM Schedule;
+
+
 DECLARE @group				AS INT		=(SELECT group_id			FROM Groups			WHERE group_name = N'PV_522');
 DECLARE @discipline			AS SMALLINT =(SELECT discipline_id		FROM Disciplines	WHERE discipline_name LIKE N'%ADO.NET');
 DECLARE @number_of_leasson	AS TINYINT	=(SELECT number_of_lessons FROM Disciplines	WHERE discipline_name LIKE N'%ADO.NET');
@@ -32,14 +34,20 @@ WHILE @leasson_number < @number_of_leasson
 BEGIN
 	
 	PRINT FORMATMESSAGE(N'%i %s %s %s',@leasson_number ,CONVERT(VARCHAR(12),@date) , DATENAME(WEEKDAY , @date) , CONVERT(VARCHAR(9),@time));
+	IF NOT EXISTS(SELECT lesson_id FROM Schedule WHERE [time] = @time AND [date] = @date)
+	INSERT Schedule VALUES (@group,@discipline,@teacher,@date,@time,0);
+
 	SET @time = DATEADD(MINUTE , 95 , @time);
+	
 	SET @leasson_number += 1;
 	
 	PRINT FORMATMESSAGE(N'%i %s %s %s',@leasson_number ,CONVERT(VARCHAR(12),@date) , DATENAME(WEEKDAY , @date) , CONVERT(VARCHAR(9),@time));
-	--IF NOT EXISTS (SELECT leassin_id FROM Shedule WHERE [date] = @date AND [time] = @time))
+	IF NOT EXISTS(SELECT lesson_id FROM Schedule WHERE [time] = @time AND [date] = @date)
+	INSERT Schedule VALUES (@group,@discipline,@teacher,@date,@time,0);
+
 	SET @leasson_number += 1;
 	
-	--SET @time = @start_time;
+	SET @time = @start_time;
 	SET @date = DATEADD(DAY , IIF(DATEPART(WEEKDAY , @date)=6 , 3 , 2) , @date);
 	--							DATEPART(WEEKDAY, @date) == 6 ? 3 : 2
 
