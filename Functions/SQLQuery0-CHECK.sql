@@ -3,4 +3,5 @@
 USE PV_522_Import;
 
 
-PRINT dbo.GetLastLearningDate(N'PV_522');
+
+--PRINT dbo.GetLastLearningDate(N'PV_522');
