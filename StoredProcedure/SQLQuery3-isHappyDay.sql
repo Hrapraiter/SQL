@@ -28,7 +28,7 @@ BEGIN
 					@date	!=	CAST(FORMATMESSAGE(N'%s-%s-%s' , @year_now , N'05',N'09') AS DATE)	AND --  День победы
 					@date	!=	CAST(FORMATMESSAGE(N'%s-%s-%s' , @year_now , N'06',N'12') AS DATE)		--  День России
 					
-					, 1 , 0)		
+					, 0 , 1)		
 		    
-					
+				
 END
