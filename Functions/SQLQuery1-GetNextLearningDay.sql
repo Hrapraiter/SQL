@@ -2,7 +2,7 @@
 USE PV_522_Import;
 GO
 
-ALTER FUNCTION GetNextLearningDay (@group_name AS NCHAR(10) , @last_learning_date AS DATE)RETURNS TINYINT
+CREATE OR ALTER FUNCTION GetNextLearningDay (@group_name AS NCHAR(10) , @last_learning_date AS DATE)RETURNS TINYINT
 AS
 BEGIN
 		DECLARE @group_id			AS INT		= (SELECT group_id FROM Groups WHERE group_name = @group_name);
@@ -19,5 +19,5 @@ BEGIN
 				SET @day += 1;
 		END
 
-		RETURN 0;
+		RETURN CAST(0 AS TINYINT);
 END
