@@ -3,6 +3,7 @@
 USE PV_522_Import;
 GO
 
+
 ALTER PROCEDURE sp_InsertScedule
 		@group_name			AS NCHAR(10),
 		@discipline_name	AS NVARCHAR(150),
@@ -20,7 +21,7 @@ BEGIN
 		DECLARE @start_time			AS	TIME(0)	=(SELECT start_time FROM Groups WHERE group_id = @group);
 		DECLARE @date				AS	DATE	=@start_date;
 		DECLARE @time				AS	TIME(0)	=@start_time;
-		
+
 		PRINT @group;
 		PRINT @discipline;
 		PRINT @number_of_lessons;
@@ -31,9 +32,10 @@ BEGIN
 		
 		WHILE @lesson_number < @number_of_lessons
 		BEGIN
-			IF dbo.isHappyDay(@date) = 1
+			
+			IF EXISTS (SELECT [date] FROM DaysOFF WHERE @date = [date])
 			BEGIN
-				SET @date = DATEADD(DAY , 1 , @date);
+				SET @date = dbo.GetNextLearningDate(@group_name , @date);
 				CONTINUE;
 			END
 

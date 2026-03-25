@@ -4,7 +4,7 @@ USE PV_522_Import;
 SET LANGUAGE RUSSIAN
 SET DATEFIRST 1
 
---DELETE FROM Schedule --WHERE discipline = (SELECT discipline_id FROM Disciplines WHERE discipline_name = N'HTML/CSS')
+DELETE FROM Schedule --WHERE discipline = (SELECT discipline_id FROM Disciplines WHERE discipline_name = N'HTML/CSS')
 
 --EXEC sp_InsertSceduleWeekdays 
 --	N'PV_522' , N'%Win%C++' , N'Олег' , N'2024-09-10', -- проверка дня програмиста
@@ -26,7 +26,11 @@ SET DATEFIRST 1
 --EXEC sp_InsertScedule N'PV_522' , N'%Win%C#' , N'Олег' , N'2025-12-30'
 --EXEC sp_InsertScedule N'PV_522' , N'%Windows%C++',N'Олег', N'2025-12-08';
 
+
 EXEC sp_InsertScedule N'PV_522' , N'%Win%C++' ,			N'Олег' , N'2025-12-09';
 EXEC sp_InsertScedule N'PV_522' , N'%Win%C#' ,			N'Олег' , N'2025-12-30';
 EXEC sp_InsertScedule N'PV_522' , N'%MS SQL Server' ,	N'Олег' , N'2026-01-20';
 EXEC sp_SelectSchedule;
+
+--EXEC InsertAllHolidaysFor 2026;
+--SELECT * FROM DaysOFF;

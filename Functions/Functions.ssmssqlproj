@@ -28,6 +28,12 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery0-CHECK.sql</FullPath>
         </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery1-GetLastLearningDate.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
@@ -45,6 +51,30 @@
           <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery1-GetNextLearningDay.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7-GetEasterDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7-GetEasterDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7-GetHolidaysStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7-GetHolidaysStartDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7-GetNewYearHolidaysStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7-GetNewYearHolidaysStartDate.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7-GetSummerHolidaysStartDate.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7-GetSummerHolidaysStartDate.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

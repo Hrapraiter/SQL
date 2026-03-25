@@ -52,11 +52,17 @@
           <AssociatedConnUserName />
           <FullPath>SQLQuery3-InsertSheduleWeekdays.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery3-isHappyDay.sql">
+        <FileNode Name="SQLQuery7-InsertAllHolidaysFor.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery3-isHappyDay.sql</FullPath>
+          <FullPath>SQLQuery7-InsertAllHolidaysFor.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery7-InsertHolidays.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-36I2V91\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery7-InsertHolidays.sql</FullPath>
         </FileNode>
         <FileNode Name="SQLQuerу2-sp_InsertScedule PROC.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-36I2V91\SQLEXPRESS:True</AssociatedConnectionMoniker>
