@@ -11,6 +11,7 @@ BEGIN
 		DECLARE @interval			AS SMALLINT	= CAST(@next_learning_day AS SMALLINT) - @last_learning_day;
 		IF @interval < 0		SET @interval = 7 + @interval;
 
+		
 		DECLARE @date AS DATE =  DATEADD(DAY , @interval , @last_learning_date);
 		RETURN IIF
 				(

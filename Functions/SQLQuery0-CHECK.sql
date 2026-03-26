@@ -12,7 +12,7 @@ SET DATEFIRST 1;
 --PRINT dbo.GetNewYearHolidaysStartDate(2025);
 --PRINT dbo.GetSummerHolidaysStartDate(2025);
 --PRINT dbo.GetEasterDate(2025);
-PRINT dbo.GetHolidaysStartDate(2026 , N'Новогодние%');
+PRINT dbo.GetHolidaysStartDate(2026 , N'Новогодние каникулы');
 PRINT dbo.GetHolidaysStartDate(2026 , N'23%');
 PRINT dbo.GetHolidaysStartDate(2026 , N'8%');
 PRINT dbo.GetHolidaysStartDate(2026 , N'Пасха');

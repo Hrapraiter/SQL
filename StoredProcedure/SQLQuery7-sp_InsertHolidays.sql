@@ -10,7 +10,7 @@ AS
 BEGIN
 	DECLARE @holiday_id		AS TINYINT	= (SELECT holiday_id FROM Holidays WHERE holiday_name LIKE @holiday_name);
 	DECLARE @duration		AS TINYINT	= (SELECT duration FROM Holidays WHERE holiday_id = @holiday_id);
-	DECLARE @date		AS DATE		= dbo.GetHolidaysStartDate(@year , @holiday_name);
+	DECLARE @date			AS DATE		= dbo.GetHolidaysStartDate(@year , @holiday_name);
 	DECLARE @day			AS TINYINT	= 0;
 	WHILE @day < @duration
 	BEGIN

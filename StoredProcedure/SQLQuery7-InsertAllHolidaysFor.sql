@@ -8,7 +8,7 @@ AS
 BEGIN 
 	DECLARE @holiday		AS TINYINT = 0;
 	DECLARE @holiday_id_max AS TINYINT = (SELECT MAX(holiday_id) FROM Holidays);
-	WHILE @holiday < @holiday_id_max
+	WHILE @holiday <= @holiday_id_max
 	BEGIN
 		IF NOT EXISTS (SELECT holiday_id FROM Holidays WHERE @holiday = holiday_id)
 		BEGIN
